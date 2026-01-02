@@ -12,86 +12,59 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: Poppins;
-  background: #f4f6f4;
-  margin: 0;
-  color: #222;
-}
+body{font-family:Poppins;background:#f4f6f4;margin:0;color:#222}
 
-header {
-  background: #2f7d32;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
+/* HEADER + NAV */
+.site-header{background:#2f7d32;color:#fff;padding:20px}
+.nav-container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:600;font-size:1.3rem}
+nav{display:flex;gap:18px}
+nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px}
+nav a.active{background:#1b5e20}
+nav a:hover{background:rgba(255,255,255,.2)}
+.menu-toggle{display:none;font-size:1.8rem;cursor:pointer}
+.page-title{text-align:center;margin-top:15px}
 
-nav a {
-  color: #fff;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: 500;
-}
+/* CONTENT */
+.section{max-width:1100px;margin:auto;padding:50px 20px}
+.box{background:#fff;padding:35px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,0.08);margin-bottom:40px}
+h2{color:#2f7d32;margin-top:0}
+.icons{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.icon-box{background:#fff;padding:25px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
 
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 50px 20px;
-}
+/* FOOTER */
+footer{background:#1b5e20;color:#fff;text-align:center;padding:15px;font-size:0.9rem}
 
-.box {
-  background: #fff;
-  padding: 35px;
-  border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  margin-bottom: 40px;
-}
-
-h2 {
-  color: #2f7d32;
-  margin-top: 0;
-}
-
-.icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.icon-box {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-footer {
-  background: #1b5e20;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
+/* MOBILE */
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  nav{display:none;flex-direction:column;background:#2f7d32;position:absolute;right:20px;top:70px;padding:15px;border-radius:10px}
+  nav.show{display:flex}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>About Us | आमच्याबद्दल</h1>
-  <p>Konkan Sanjeevan | कोकण संजीवन</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="tourism.html">Tourism</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">Konkan Sanjeevan</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+      <a href="index.html">🏠 Home</a>
+      <a href="products.html">🌾 Products</a>
+      <a href="tourism.html">🏖 Tourism</a>
+      <a href="about.html" class="active">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </nav>
+  </div>
+
+  <h1 class="page-title">About Us | आमच्याबद्दल</h1>
 </header>
 
 <section class="section">
 
-  <!-- ABOUT -->
   <div class="box">
     <h2>🌿 About Konkan Sanjeevan</h2>
     <p>
@@ -110,7 +83,6 @@ footer {
     </p>
   </div>
 
-  <!-- FOUNDER MESSAGE -->
   <div class="box">
     <h2>👤 Founder’s Message | संस्थापकांचा संदेश</h2>
     <p>
@@ -127,30 +99,21 @@ footer {
     </p>
   </div>
 
-  <!-- VISION & MISSION -->
   <div class="icons">
     <div class="icon-box">
       <h2>🎯 Vision | दृष्टी</h2>
-      <p>
-        <strong>English:</strong><br>
-        To become a trusted bridge between Konkan’s rural communities and conscious consumers.
-      </p>
-      <p>
-        <strong>मराठी:</strong><br>
-        कोकणातील ग्रामीण समाज आणि जागरूक ग्राहकांमधील विश्वासार्ह दुवा बनणे.
-      </p>
+      <p><strong>English:</strong><br>
+      To become a trusted bridge between Konkan’s rural communities and conscious consumers.</p>
+      <p><strong>मराठी:</strong><br>
+      कोकणातील ग्रामीण समाज आणि जागरूक ग्राहकांमधील विश्वासार्ह दुवा बनणे.</p>
     </div>
 
     <div class="icon-box">
       <h2>🚜 Mission | ध्येय</h2>
-      <p>
-        <strong>English:</strong><br>
-        Support local farmers, promote sustainable practices, and preserve Konkan’s heritage.
-      </p>
-      <p>
-        <strong>मराठी:</strong><br>
-        स्थानिक शेतकऱ्यांना पाठबळ देणे, शाश्वत पद्धती वाढवणे आणि कोकणाची परंपरा जपणे.
-      </p>
+      <p><strong>English:</strong><br>
+      Support local farmers, promote sustainable practices, and preserve Konkan’s heritage.</p>
+      <p><strong>मराठी:</strong><br>
+      स्थानिक शेतकऱ्यांना पाठबळ देणे, शाश्वत पद्धती वाढवणे आणि कोकणाची परंपरा जपणे.</p>
     </div>
   </div>
 
@@ -159,6 +122,12 @@ footer {
 <footer>
 © 2026 Konkan Sanjeevan | Rooted in Konkan 🌿
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
