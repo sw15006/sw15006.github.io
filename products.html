@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Farm Products | Konkan Sanjeevan</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products - Konkan Sanjeevan</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<style>
+body{font-family:Poppins;background:#f4f6f4;margin:0}
+header{background:#2f7d32;color:#fff;padding:30px;text-align:center}
+.grid{max-width:1100px;margin:auto;padding:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px}
+.card{background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.card img{width:100%;border-radius:12px 12px 0 0}
+.card div{padding:15px}
+.btn{background:#2f7d32;color:#fff;padding:8px 14px;text-decoration:none;border-radius:5px}
+</style>
 </head>
-<body style="font-family:Arial;padding:20px">
 
+<body>
+<header>
 <h1>Farm Products | शेतमाल</h1>
+</header>
 
-<h3>Konkan Rice (कोंकण भात)</h3>
-<p>₹80 / kg</p>
-<a href="https://wa.me/91XXXXXXXXXX?text=I want Konkan Rice">Order on WhatsApp</a>
+<section class="grid">
 
-<h3>Udid Dal (उडीद डाळ)</h3>
-<p>₹140 / kg</p>
-<a href="https://wa.me/91XXXXXXXXXX?text=I want Udid Dal">Order on WhatsApp</a>
+<div class="card">
+<img src="images/rice.jpg">
+<div>
+<h3>Konkan Rice</h3>
+<p>₹80/kg</p>
+<a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Konkan Rice">Order on WhatsApp</a>
+</div>
+</div>
 
-<p><b>FSSAI Registration:</b> To be updated</p>
+<div class="card">
+<img src="images/mango.jpg">
+<div>
+<h3>Alphonso Mango</h3>
+<p>Seasonal</p>
+<a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Alphonso Mango">Order</a>
+</div>
+</div>
 
-<a href="index.html">← Back to Home</a>
+<div class="card">
+<img src="images/cashew.jpg">
+<div>
+<h3>Cashew</h3>
+<p>₹900/kg</p>
+<a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want Cashew">Order</a>
+</div>
+</div>
 
+</section>
 </body>
 </html>
