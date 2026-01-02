@@ -3,16 +3,50 @@
 <head>
 <title>Tourism - Konkan Sanjeevan</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
 <style>
 body{font-family:Poppins;background:#f4f6f4;margin:0}
-header{background:#2f7d32;color:#fff;padding:30px;text-align:center}
-.section{max-width:1000px;margin:auto;padding:40px}
+
+/* HEADER + NAV */
+.site-header{background:#2f7d32;color:#fff;padding:20px}
+.nav-container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:600;font-size:1.3rem}
+nav{display:flex;gap:18px}
+nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px}
+nav a.active{background:#1b5e20}
+nav a:hover{background:rgba(255,255,255,.2)}
+.menu-toggle{display:none;font-size:1.8rem;cursor:pointer}
+.page-title{text-align:center;margin-top:15px}
+
+/* CONTENT */
+.section{max-width:1000px;margin:auto;padding:40px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);margin-top:40px}
+
+/* MOBILE */
+@media(max-width:768px){
+  .menu-toggle{display:block}
+  nav{display:none;flex-direction:column;background:#2f7d32;position:absolute;right:20px;top:70px;padding:15px;border-radius:10px}
+  nav.show{display:flex}
+}
 </style>
 </head>
 
 <body>
-<header>
-<h1>Konkan Tourism | पर्यटन</h1>
+
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">Konkan Sanjeevan</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+      <a href="index.html">🏠 Home</a>
+      <a href="products.html">🌾 Products</a>
+      <a href="tourism.html" class="active">🏖 Tourism</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </nav>
+  </div>
+
+  <h1 class="page-title">Konkan Tourism | पर्यटन</h1>
 </header>
 
 <section class="section">
@@ -23,5 +57,12 @@ header{background:#2f7d32;color:#fff;padding:30px;text-align:center}
 समुद्रकिनारे, गावातील होमस्टे आणि स्थानिक मार्गदर्शक उपलब्ध.
 </p>
 </section>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
