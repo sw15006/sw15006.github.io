@@ -18,16 +18,28 @@ footer{background:#1b5e20;color:#fff;text-align:center;padding:15px}
 </head>
 
 <body>
-<header>
-<h1>Konkan Sanjeevan</h1>
-<p>Connecting Konkan | कोकणाशी नाळ जोडणारे व्यासपीठ</p>
-<nav>
-<a href="index.html">Home</a>
-<a href="products.html">Products</a>
-<a href="tourism.html">Tourism</a>
-<a href="contact.html">Contact</a>
-<a href="about.html">About</a>
-</nav>
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      Konkan Sanjeevan
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </div>
+
+    <nav id="navMenu">
+      <a href="index.html" class="active">🏠 Home</a>
+      <a href="products.html">🌾 Products</a>
+      <a href="tourism.html">🏖 Tourism</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </nav>
+  </div>
+
+  <p class="tagline">
+    Connecting Konkan | कोकणाशी नाळ जोडणारे व्यासपीठ
+  </p>
 </header>
 
 <section class="section cards">
