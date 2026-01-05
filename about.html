@@ -2,41 +2,69 @@
 <html lang="mr">
 <head>
 <meta charset="UTF-8">
+<title data-mr="आमच्याबद्दल | कोंकण संजीवन" data-en="About Us | Konkan Sanjeevan">
+आमच्याबद्दल | कोंकण संजीवन
+</title>
+
+<!-- SEO -->
+<meta name="description"
+      content="Konkan Sanjeevan connects people with authentic Konkan farm products and tourism while supporting local farmers and sustainable rural livelihoods.">
+<meta name="keywords"
+      content="Konkan products, organic rice, alphonso mango, konkan tourism, local farmers, rural development">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Konkan Sanjeevan</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Poppins;background:#f4f6f4;color:#333}
+body{font-family:Poppins;background:#f4f6f4;margin:0;color:#222}
 
-/* HEADER */
+/* HEADER + NAV */
 .site-header{background:#2f7d32;color:#fff;padding:20px}
 .nav-container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}
 
-.logo{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:600}
-.logo img{height:60px;background:#fff;padding:6px;border-radius:8px}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:600;
+  font-size:1.3rem;
+}
+
+.logo img{
+  height:48px;
+  background:#fff;
+  padding:4px;
+  border-radius:6px;
+}
 
 nav{display:flex;gap:18px}
 nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px}
 nav a.active{background:#1b5e20}
 nav a:hover{background:rgba(255,255,255,.2)}
 
-.lang-btn{background:#fff;color:#2f7d32;border:none;padding:6px 10px;border-radius:6px;font-weight:600;cursor:pointer}
+.lang-btn{
+  background:#fff;
+  color:#2f7d32;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+}
 
 .menu-toggle{display:none;font-size:1.8rem;cursor:pointer}
-
-.tagline{text-align:center;margin-top:10px;font-size:.95rem}
+.page-title{text-align:center;margin-top:15px}
 
 /* CONTENT */
-.section{max-width:1100px;margin:auto;padding:40px 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.btn{display:inline-block;margin-top:15px;padding:10px 18px;background:#2f7d32;color:#fff;text-decoration:none;border-radius:6px}
+.section{max-width:1100px;margin:auto;padding:50px 20px}
+.box{background:#fff;padding:35px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,0.08);margin-bottom:40px}
+h2{color:#2f7d32;margin-top:0}
+
+.icons{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.icon-box{background:#fff;padding:25px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.08)}
 
 /* FOOTER */
-footer{background:#1b5e20;color:#fff;text-align:center;padding:15px}
+footer{background:#1b5e20;color:#fff;text-align:center;padding:15px;font-size:0.9rem}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -53,8 +81,10 @@ footer{background:#1b5e20;color:#fff;text-align:center;padding:15px}
   <div class="nav-container">
 
     <div class="logo">
-      <img src="images/konkansanjeevan_logo.png">
-      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
+      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan">
+      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">
+        कोंकण संजीवन
+      </span>
     </div>
 
     <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">English</button>
@@ -62,50 +92,72 @@ footer{background:#1b5e20;color:#fff;text-align:center;padding:15px}
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
-      <a href="index.html" class="active" data-mr="🏠 मुख्यपृष्ठ" data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
+      <a href="index.html" data-mr="🏠 मुख्यपृष्ठ" data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
       <a href="products.html" data-mr="🌾 उत्पादने" data-en="🌾 Products">🌾 उत्पादने</a>
       <a href="tourism.html" data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</a>
-      <a href="about.html" data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
+      <a href="about.html" class="active" data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
       <a href="contact.html" data-mr="📞 संपर्क" data-en="📞 Contact">📞 संपर्क</a>
     </nav>
-
   </div>
 
-  <p class="tagline"
-     data-mr="कोंकणाशी नाळ जोडणारे व्यासपीठ"
-     data-en="Connecting Konkan">
-     कोंकणाशी नाळ जोडणारे व्यासपीठ
-  </p>
+  <h1 class="page-title"
+      data-mr="आमच्याबद्दल"
+      data-en="About Us">
+      आमच्याबद्दल
+  </h1>
 </header>
 
-<section class="section cards">
-  <div class="card">
-    <h2 data-mr="🌾 शेतमाल" data-en="🌾 Farm Products">🌾 शेतमाल</h2>
-    <p data-mr="थेट शेतकऱ्यांकडून." data-en="Direct from farmers.">
-      थेट शेतकऱ्यांकडून.
+<section class="section">
+
+  <!-- ABOUT -->
+  <div class="box">
+    <h2 data-mr="🌿 कोंकण संजीवन विषयी" data-en="🌿 About Konkan Sanjeevan">
+      🌿 कोंकण संजीवन विषयी
+    </h2>
+
+    <p data-mr="कोंकण संजीवन हे कोकणातील अस्सल शेतमाल आणि पर्यटन अनुभव लोकांपर्यंत पोहोचवणारे व्यासपीठ आहे. आम्ही स्थानिक शेतकरी, उत्पादक आणि पर्यटन भागीदारांसोबत थेट काम करून शाश्वत ग्रामीण विकासाला चालना देतो."
+       data-en="Konkan Sanjeevan is a purpose-driven platform connecting people with authentic Konkan farm products and tourism experiences while supporting local farmers and sustainable rural livelihoods.">
+       कोंकण संजीवन हे कोकणातील अस्सल शेतमाल आणि पर्यटन अनुभव लोकांपर्यंत पोहोचवणारे व्यासपीठ आहे. आम्ही स्थानिक शेतकरी, उत्पादक आणि पर्यटन भागीदारांसोबत थेट काम करून शाश्वत ग्रामीण विकासाला चालना देतो.
     </p>
-    <a class="btn" href="products.html"
-       data-mr="उत्पादने पाहा"
-       data-en="View Products">
-       उत्पादने पाहा
-    </a>
   </div>
 
-  <div class="card">
-    <h2 data-mr="🏖 कोंकण पर्यटन" data-en="🏖 Konkan Tourism">🏖 कोंकण पर्यटन</h2>
-    <p data-mr="पर्यटन आणि होमस्टे." data-en="Homestays & tours.">
-      पर्यटन आणि होमस्टे.
+  <!-- FOUNDER -->
+  <div class="box">
+    <h2 data-mr="👤 संस्थापकांचा संदेश" data-en="👤 Founder’s Message">
+      👤 संस्थापकांचा संदेश
+    </h2>
+
+    <p data-mr="कोंकणातील मेहनती शेतकरी व उत्पादकांना योग्य मूल्य मिळावे आणि ग्राहकांपर्यंत विश्वासार्ह गुणवत्ता पोहोचावी, या उद्देशाने कोंकण संजीवनची सुरुवात झाली."
+       data-en="Konkan Sanjeevan was started with a simple vision — to ensure that hardworking people of Konkan receive fair value and customers receive quality they can trust.">
+       कोंकणातील मेहनती शेतकरी व उत्पादकांना योग्य मूल्य मिळावे आणि ग्राहकांपर्यंत विश्वासार्ह गुणवत्ता पोहोचावी, या उद्देशाने कोंकण संजीवनची सुरुवात झाली.
     </p>
-    <a class="btn" href="tourism.html"
-       data-mr="पर्यटन पाहा"
-       data-en="Explore Tourism">
-       पर्यटन पाहा
-    </a>
   </div>
+
+  <!-- VISION & MISSION -->
+  <div class="icons">
+
+    <div class="icon-box">
+      <h2 data-mr="🎯 दृष्टी" data-en="🎯 Vision">🎯 दृष्टी</h2>
+      <p data-mr="कोंकणातील ग्रामीण समाज आणि जागरूक ग्राहकांमधील विश्वासार्ह दुवा बनणे."
+         data-en="To become a trusted bridge between Konkan’s rural communities and conscious consumers.">
+         कोंकणातील ग्रामीण समाज आणि जागरूक ग्राहकांमधील विश्वासार्ह दुवा बनणे.
+      </p>
+    </div>
+
+    <div class="icon-box">
+      <h2 data-mr="🚜 ध्येय" data-en="🚜 Mission">🚜 ध्येय</h2>
+      <p data-mr="स्थानिक शेतकऱ्यांना पाठबळ देणे, शाश्वत पद्धती वाढवणे आणि कोंकणाची परंपरा जपणे."
+         data-en="Support local farmers, promote sustainable practices, and preserve Konkan’s heritage.">
+         स्थानिक शेतकऱ्यांना पाठबळ देणे, शाश्वत पद्धती वाढवणे आणि कोंकणाची परंपरा जपणे.
+      </p>
+    </div>
+
+  </div>
+
 </section>
 
 <footer>
-© 2026 कोंकण संजीवन
+  © 2026 कोंकण संजीवन | Rooted in Konkan 🌿
 </footer>
 
 <script>
@@ -113,24 +165,14 @@ function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
 
-/* ===== LANGUAGE SYSTEM (FINAL FIX) ===== */
-let lang = localStorage.getItem("lang") || "mr";
-
-function applyLanguage(){
-  document.querySelectorAll("[data-mr]").forEach(el=>{
-    el.innerHTML = (lang === "mr") ? el.dataset.mr : el.dataset.en;
-  });
-  document.getElementById("langBtn").innerText =
-    (lang === "mr") ? "English" : "मराठी";
-}
-
+let lang="mr";
 function toggleLanguage(){
-  lang = (lang === "mr") ? "en" : "mr";
-  localStorage.setItem("lang", lang);
-  applyLanguage();
+  document.querySelectorAll("[data-mr]").forEach(el=>{
+    el.innerText=(lang==="mr")?el.dataset.en:el.dataset.mr;
+  });
+  document.getElementById("langBtn").innerText=(lang==="mr")?"मराठी":"English";
+  lang=(lang==="mr")?"en":"mr";
 }
-
-applyLanguage();
 </script>
 
 </body>
