@@ -1,25 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="mr">
 <head>
-<title>Contact - Konkan Sanjeevan</title>
+<meta charset="UTF-8">
+<title>Contact | Konkan Sanjeevan</title>
+
+<meta name="description" content="Contact Konkan Sanjeevan for Konkan farm products and tourism enquiries.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-body{font-family:Poppins;background:#f4f6f4;margin:0}
+body{font-family:Poppins;background:#f4f6f4;margin:0;color:#222}
 
-/* HEADER + NAV */
+/* HEADER */
 .site-header{background:#2f7d32;color:#fff;padding:20px}
 .nav-container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:600;font-size:1.3rem}
+
+.logo{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:600}
+.logo img{height:48px;background:#fff;padding:4px;border-radius:6px}
+
 nav{display:flex;gap:18px}
 nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px}
 nav a.active{background:#1b5e20}
 nav a:hover{background:rgba(255,255,255,.2)}
+
+.lang-btn{background:#fff;color:#2f7d32;border:none;padding:6px 10px;border-radius:6px;font-weight:600;cursor:pointer}
 .menu-toggle{display:none;font-size:1.8rem;cursor:pointer}
 .page-title{text-align:center;margin-top:15px}
 
 /* CONTENT */
-.section{max-width:700px;margin:40px auto;padding:40px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.section{max-width:1100px;margin:auto;padding:50px 20px}
+.box{background:#fff;padding:35px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,0.08)}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.contact-card{
+  background:#f9f9f9;
+  padding:25px;
+  border-radius:12px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  background:#2f7d32;
+  color:#fff;
+  padding:8px 14px;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+/* FOOTER */
+footer{background:#1b5e20;color:#fff;text-align:center;padding:15px;font-size:.9rem}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -34,33 +70,92 @@ nav a:hover{background:rgba(255,255,255,.2)}
 
 <header class="site-header">
   <div class="nav-container">
-    <div class="logo">Konkan Sanjeevan</div>
+
+    <div class="logo">
+      <img src="images/konkansanjeevan_logo.png">
+      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
+    </div>
+
+    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">English</button>
+
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
-      <a href="index.html">🏠 Home</a>
-      <a href="products.html">🌾 Products</a>
-      <a href="tourism.html">🏖 Tourism</a>
-      <a href="about.html">ℹ️ About</a>
-      <a href="contact.html" class="active">📞 Contact</a>
+      <a href="index.html" data-mr="🏠 मुख्यपृष्ठ" data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
+      <a href="products.html" data-mr="🌾 उत्पादने" data-en="🌾 Products">🌾 उत्पादने</a>
+      <a href="tourism.html" data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</a>
+      <a href="about.html" data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
+      <a href="contact.html" class="active" data-mr="📞 संपर्क" data-en="📞 Contact">📞 संपर्क</a>
     </nav>
   </div>
 
-  <h1 class="page-title">Contact Us | संपर्क</h1>
+  <h1 class="page-title"
+      data-mr="📞 संपर्क"
+      data-en="📞 Contact Us">
+      📞 संपर्क
+  </h1>
 </header>
 
 <section class="section">
-<p>
-📞 <strong>Phone / WhatsApp:</strong> +91 9664016039<br><br>
-📧 <strong>Email:</strong> info@konkansanjeevan.com<br><br>
-आमच्याशी संपर्क साधा.
-</p>
+  <div class="box">
+
+    <div class="contact-grid">
+
+      <!-- PHONE -->
+      <div class="contact-card">
+        <h2 data-mr="📱 फोन" data-en="📱 Phone">📱 फोन</h2>
+        <p>+91 XXXXXXXXXX</p>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="contact-card">
+        <h2 data-mr="📧 ईमेल" data-en="📧 Email">📧 ईमेल</h2>
+        <p>contact@konkansanjeevan.com</p>
+      </div>
+
+      <!-- WHATSAPP -->
+      <div class="contact-card">
+        <h2 data-mr="💬 व्हॉट्सॲप" data-en="💬 WhatsApp">💬 व्हॉट्सॲप</h2>
+        <a class="btn"
+           href="https://wa.me/91XXXXXXXXXX?text=I want to know more about Konkan Sanjeevan"
+           data-mr="व्हॉट्सॲपवर संदेश पाठवा"
+           data-en="Message on WhatsApp">
+           व्हॉट्सॲपवर संदेश पाठवा
+        </a>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
+<footer>
+© 2026 कोंकण संजीवन
+</footer>
+
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
+
+/* LANGUAGE SYSTEM */
+let lang = localStorage.getItem("lang") || "mr";
+
+function applyLanguage(){
+  document.querySelectorAll("[data-mr]").forEach(el=>{
+    el.innerHTML = (lang==="mr") ? el.dataset.mr : el.dataset.en;
+  });
+  document.getElementById("langBtn").innerText =
+    (lang==="mr") ? "English" : "मराठी";
+}
+
+function toggleLanguage(){
+  lang = (lang==="mr") ? "en" : "mr";
+  localStorage.setItem("lang", lang);
+  applyLanguage();
+}
+
+applyLanguage();
 </script>
 
 </body>
