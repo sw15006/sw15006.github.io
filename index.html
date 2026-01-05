@@ -4,106 +4,162 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Konkan Sanjeevan</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<style>
-body{margin:0;font-family:Poppins;background:#f4f6f4}
-header{background:#2f7d32;color:#fff;padding:60px 20px;text-align:center}
-nav a{color:#fff;margin:0 12px;text-decoration:none;font-weight:500}
-.section{max-width:1100px;margin:auto;padding:40px 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.btn{display:inline-block;margin-top:15px;padding:10px 18px;background:#2f7d32;color:#fff;text-decoration:none;border-radius:6px}
-footer{background:#1b5e20;color:#fff;text-align:center;padding:15px}
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; }
+
+body{
+  margin:0;
+  font-family:Poppins;
+  background:#f4f6f4;
+  color:#333;
+}
+
+/* ================= HEADER ================= */
 .site-header {
-  background: #2f7d32;
-  color: white;
-  padding: 20px;
+  background:#2f7d32;
+  color:#fff;
+  padding:20px;
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1100px;
+  margin:auto;
 }
 
+/* LOGO */
 .logo {
-  font-size: 1.3rem;
-  font-weight: 600;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.3rem;
+  font-weight:600;
 }
 
+.logo img {
+  height:42px;
+  width:auto;
+  background:#fff;
+  padding:4px;
+  border-radius:6px;
+}
+
+/* NAVIGATION */
 nav {
-  display: flex;
-  gap: 18px;
+  display:flex;
+  gap:18px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  padding:6px 10px;
+  border-radius:6px;
 }
 
 nav a:hover {
-  background: rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.2);
 }
 
 nav a.active {
-  background: #1b5e20;
+  background:#1b5e20;
 }
 
+/* MOBILE MENU */
 .menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
+  display:none;
+  font-size:1.8rem;
+  cursor:pointer;
 }
 
+/* TAGLINE */
 .tagline {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 0.95rem;
-  opacity: 0.95;
+  text-align:center;
+  margin-top:10px;
+  font-size:0.95rem;
+  opacity:0.95;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
+/* ================= CONTENT ================= */
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#2f7d32;
+  color:#fff;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#1b5e20;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:768px){
   .menu-toggle {
-    display: block;
+    display:block;
   }
 
   nav {
-    display: none;
-    flex-direction: column;
-    background: #2f7d32;
-    position: absolute;
-    right: 20px;
-    top: 70px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display:none;
+    flex-direction:column;
+    background:#2f7d32;
+    position:absolute;
+    right:20px;
+    top:70px;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
   }
 
   nav.show {
-    display: flex;
+    display:flex;
   }
 }
-
 </style>
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="nav-container">
+
     <div class="logo">
-      Konkan Sanjeevan
+      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan Logo">
+      <span>Konkan Sanjeevan</span>
     </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-      ☰
-    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
       <a href="index.html" class="active">🏠 Home</a>
@@ -112,6 +168,7 @@ nav a.active {
       <a href="about.html">ℹ️ About</a>
       <a href="contact.html">📞 Contact</a>
     </nav>
+
   </div>
 
   <p class="tagline">
@@ -120,32 +177,36 @@ nav a.active {
 </header>
 
 <section class="section cards">
-<div class="card">
-<h2>🌾 Farm Products</h2>
-<p>Direct from farmers.<br>थेट शेतकऱ्यांकडून.</p>
-<a class="btn" href="products.html">View Products</a>
-</div>
+  <div class="card">
+    <h2>🌾 Farm Products</h2>
+    <p>Direct from farmers.<br>थेट शेतकऱ्यांकडून.</p>
+    <a class="btn" href="products.html">View Products</a>
+  </div>
 
-<div class="card">
-<h2>🏖 Konkan Tourism</h2>
-<p>Homestays & tours.<br>पर्यटन आणि होमस्टे.</p>
-<a class="btn" href="tourism.html">Explore Tourism</a>
-</div>
+  <div class="card">
+    <h2>🏖 Konkan Tourism</h2>
+    <p>Homestays & tours.<br>पर्यटन आणि होमस्टे.</p>
+    <a class="btn" href="tourism.html">Explore Tourism</a>
+  </div>
 </section>
 
 <section class="section">
-<h2>Why Konkan Sanjeevan?</h2>
-<p>We support local farmers and tourism together.<br>
-शेतकरी आणि पर्यटनाला एकत्र पाठिंबा.</p>
+  <h2>Why Konkan Sanjeevan?</h2>
+  <p>
+    We support local farmers and tourism together.<br>
+    शेतकरी आणि पर्यटनाला एकत्र पाठिंबा.
+  </p>
 </section>
 
 <footer>
-© 2026 Konkan Sanjeevan
+  © 2026 Konkan Sanjeevan
 </footer>
+
 <script>
 function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
+
 </body>
 </html>
