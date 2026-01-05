@@ -1,31 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="mr">
 <head>
-<title>Tourism - Konkan Sanjeevan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title data-mr="पर्यटन - कोंकण संजीवन" data-en="Tourism - Konkan Sanjeevan">
+पर्यटन - कोंकण संजीवन
+</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-body{font-family:Poppins;background:#f4f6f4;margin:0}
+body{
+  font-family:Poppins;
+  background:#f4f6f4;
+  margin:0;
+  color:#333;
+}
 
-/* HEADER + NAV */
-.site-header{background:#2f7d32;color:#fff;padding:20px}
-.nav-container{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:600;font-size:1.3rem}
-nav{display:flex;gap:18px}
-nav a{color:#fff;text-decoration:none;padding:6px 10px;border-radius:6px}
-nav a.active{background:#1b5e20}
-nav a:hover{background:rgba(255,255,255,.2)}
-.menu-toggle{display:none;font-size:1.8rem;cursor:pointer}
-.page-title{text-align:center;margin-top:15px}
+/* ================= HEADER ================= */
+.site-header{
+  background:#2f7d32;
+  color:#fff;
+  padding:20px;
+}
 
-/* CONTENT */
-.section{max-width:1000px;margin:auto;padding:40px;background:#fff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);margin-top:40px}
+.nav-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
-/* MOBILE */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:600;
+  font-size:1.3rem;
+}
+
+.logo img{
+  height:48px;
+  background:#fff;
+  padding:4px;
+  border-radius:6px;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  gap:18px;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  padding:6px 10px;
+  border-radius:6px;
+}
+
+nav a.active{
+  background:#1b5e20;
+}
+
+nav a:hover{
+  background:rgba(255,255,255,.2);
+}
+
+/* LANGUAGE BUTTON */
+.lang-btn{
+  background:#fff;
+  color:#2f7d32;
+  border:none;
+  padding:6px 10px;
+  border-radius:6px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* MOBILE MENU */
+.menu-toggle{
+  display:none;
+  font-size:1.8rem;
+  cursor:pointer;
+}
+
+/* PAGE TITLE */
+.page-title{
+  text-align:center;
+  margin-top:15px;
+}
+
+/* ================= CONTENT ================= */
+.section{
+  max-width:1000px;
+  margin:40px auto;
+  padding:40px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  line-height:1.8;
+}
+
+/* ================= MOBILE ================= */
 @media(max-width:768px){
   .menu-toggle{display:block}
-  nav{display:none;flex-direction:column;background:#2f7d32;position:absolute;right:20px;top:70px;padding:15px;border-radius:10px}
-  nav.show{display:flex}
+
+  nav{
+    display:none;
+    flex-direction:column;
+    background:#2f7d32;
+    position:absolute;
+    right:20px;
+    top:70px;
+    padding:15px;
+    border-radius:10px;
+  }
+
+  nav.show{
+    display:flex;
+  }
 }
 </style>
 </head>
@@ -34,33 +130,73 @@ nav a:hover{background:rgba(255,255,255,.2)}
 
 <header class="site-header">
   <div class="nav-container">
-    <div class="logo">Konkan Sanjeevan</div>
+
+    <div class="logo">
+      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan">
+      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">
+        कोंकण संजीवन
+      </span>
+    </div>
+
+    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">English</button>
+
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
-      <a href="index.html">🏠 Home</a>
-      <a href="products.html">🌾 Products</a>
-      <a href="tourism.html" class="active">🏖 Tourism</a>
-      <a href="about.html">ℹ️ About</a>
-      <a href="contact.html">📞 Contact</a>
+      <a href="index.html" data-mr="🏠 मुख्यपृष्ठ" data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
+      <a href="products.html" data-mr="🌾 उत्पादने" data-en="🌾 Products">🌾 उत्पादने</a>
+      <a href="tourism.html" class="active" data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</a>
+      <a href="about.html" data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
+      <a href="contact.html" data-mr="📞 संपर्क" data-en="📞 Contact">📞 संपर्क</a>
     </nav>
+
   </div>
 
-  <h1 class="page-title">Konkan Tourism | पर्यटन</h1>
+  <h1 class="page-title"
+      data-mr="🏖 कोंकण पर्यटन"
+      data-en="🏖 Konkan Tourism">
+      🏖 कोंकण पर्यटन
+  </h1>
 </header>
 
 <section class="section">
-<p>
-• Beach tours<br>
-• Village homestays<br>
-• Local guides<br><br>
-समुद्रकिनारे, गावातील होमस्टे आणि स्थानिक मार्गदर्शक उपलब्ध.
-</p>
+
+  <p data-mr="• समुद्रकिनारी सहली<br>• गावातील होमस्टे<br>• स्थानिक मार्गदर्शक"
+     data-en="• Beach tours<br>• Village homestays<br>• Local guides">
+     • समुद्रकिनारी सहली<br>
+     • गावातील होमस्टे<br>
+     • स्थानिक मार्गदर्शक
+  </p>
+
+  <p data-mr="कोंकणातील निसर्गसौंदर्य, स्थानिक संस्कृती आणि सुरक्षित पर्यटन अनुभव देण्यासाठी आम्ही कार्य करतो."
+     data-en="We provide authentic Konkan experiences with nature, culture, and safe local tourism.">
+     कोंकणातील निसर्गसौंदर्य, स्थानिक संस्कृती आणि सुरक्षित पर्यटन अनुभव देण्यासाठी आम्ही कार्य करतो.
+  </p>
+
+  <p>
+    <a class="btn"
+       href="https://wa.me/91XXXXXXXXXX?text=I want Konkan Tourism details"
+       data-mr="व्हॉट्सॲपवर चौकशी करा"
+       data-en="Enquire on WhatsApp">
+       व्हॉट्सॲपवर चौकशी करा
+    </a>
+  </p>
+
 </section>
 
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
+}
+
+let lang = "mr";
+function toggleLanguage(){
+  document.querySelectorAll("[data-mr]").forEach(el=>{
+    el.innerText = (lang==="mr") ? el.dataset.en : el.dataset.mr;
+  });
+  document.getElementById("langBtn").innerText =
+    (lang==="mr") ? "मराठी" : "English";
+  lang = (lang==="mr") ? "en" : "mr";
 }
 </script>
 
