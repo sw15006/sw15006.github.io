@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-<link rel="stylesheet" href="css/style.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Konkan Sanjeevan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konkan Sanjeevan</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header class=<header class="site-header home-header">
-"site-header">
+<!-- ✅ CORRECT HEADER -->
+<header class="site-header home-header">
+
   <div class="nav-container">
 
     <div class="logo">
@@ -35,27 +38,44 @@
 
   </div>
 
-  <p class="tagline" data-mr="कोंकणाशी नाळ जोडणारे व्यासपीठ" data-en="Connecting Konkan">
-    कोंकणाशी नाळ जोडणारे व्यासपीठ
+  <p class="tagline"
+     data-mr="कोंकणाशी नाळ जोडणारे व्यासपीठ"
+     data-en="Connecting Konkan">
+     कोंकणाशी नाळ जोडणारे व्यासपीठ
   </p>
+
 </header>
 
 <section class="section cards">
   <div class="card">
     <h2 data-mr="🌾 शेतमाल" data-en="🌾 Farm Products">🌾 शेतमाल</h2>
-    <p data-mr="थेट शेतकऱ्यांकडून." data-en="Direct from farmers.">थेट शेतकऱ्यांकडून.</p>
-    <a class="btn" href="products.html" data-mr="उत्पादने पाहा" data-en="View Products">उत्पादने पाहा</a>
+    <p data-mr="थेट शेतकऱ्यांकडून." data-en="Direct from farmers.">
+      थेट शेतकऱ्यांकडून.
+    </p>
+    <a class="btn" href="products.html"
+       data-mr="उत्पादने पाहा"
+       data-en="View Products">
+       उत्पादने पाहा
+    </a>
   </div>
 
   <div class="card">
     <h2 data-mr="🏖 कोंकण पर्यटन" data-en="🏖 Konkan Tourism">🏖 कोंकण पर्यटन</h2>
-    <p data-mr="पर्यटन आणि होमस्टे." data-en="Homestays & tours.">पर्यटन आणि होमस्टे.</p>
-    <a class="btn" href="tourism.html" data-mr="पर्यटन पाहा" data-en="Explore Tourism">पर्यटन पाहा</a>
+    <p data-mr="पर्यटन आणि होमस्टे." data-en="Homestays & tours.">
+      पर्यटन आणि होमस्टे.
+    </p>
+    <a class="btn" href="tourism.html"
+       data-mr="पर्यटन पाहा"
+       data-en="Explore Tourism">
+       पर्यटन पाहा
+    </a>
   </div>
 </section>
 
 <section class="section">
-  <h2 data-mr="कोंकण संजीवन का?" data-en="Why Konkan Sanjeevan?">कोंकण संजीवन का?</h2>
+  <h2 data-mr="कोंकण संजीवन का?" data-en="Why Konkan Sanjeevan?">
+    कोंकण संजीवन का?
+  </h2>
   <p data-mr="शेतकरी आणि पर्यटनाला एकत्र पाठिंबा."
      data-en="We support local farmers and tourism together.">
      शेतकरी आणि पर्यटनाला एकत्र पाठिंबा.
@@ -67,19 +87,5 @@
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
-
-let lang = "mr";
-function toggleLanguage(){
-  document.querySelectorAll("[data-mr]").forEach(el=>{
-    el.innerText = (lang==="mr") ? el.dataset.en : el.dataset.mr;
-  });
-  document.getElementById("langBtn").innerText = (lang==="mr") ? "मराठी" : "English";
-  lang = (lang==="mr") ? "en" : "mr";
-}
-</script>
-
-</body>
-</html>
+/* MOBILE MENU */
+fun
