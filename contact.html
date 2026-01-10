@@ -1,78 +1,53 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-<link rel="stylesheet" href="css/style.css">
 <meta charset="UTF-8">
-<title>Contact | Konkan Sanjeevan</title>
-
-<meta name="description" content="Contact Konkan Sanjeevan for Konkan farm products and tourism enquiries.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>संपर्क | Konkan Sanjeevan</title>
+<meta name="description" content="Contact Konkan Sanjeevan via WhatsApp or phone">
+<link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<header class="site-header">
-<header class="site-header contact-header">
+<header class="site-header" data-slide="2">
   <div class="nav-container">
-
     <div class="logo">
       <img src="images/konkansanjeevan_logo.png">
       <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
     </div>
 
-    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">English</button>
-
+    <button class="lang-btn" onclick="toggleLanguage()">English</button>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
-      <a href="index.html" data-mr="🏠 मुख्यपृष्ठ" data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
-      <a href="products.html" data-mr="🌾 उत्पादने" data-en="🌾 Products">🌾 उत्पादने</a>
-      <a href="tourism.html" data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</a>
-      <a href="about.html" data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
-      <a href="contact.html" class="active" data-mr="📞 संपर्क" data-en="📞 Contact">📞 संपर्क</a>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="tourism.html">Tourism</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
     </nav>
   </div>
 
   <h1 class="page-title"
       data-mr="📞 संपर्क"
-      data-en="📞 Contact Us">
+      data-en="📞 Contact">
       📞 संपर्क
   </h1>
 </header>
 
 <section class="section">
-  <div class="box">
+  <div class="card">
+    <p data-mr="ऑर्डर किंवा माहिती साठी व्हॉट्सॲप करा."
+       data-en="Contact us on WhatsApp for orders or enquiries.">
+       ऑर्डर किंवा माहिती साठी व्हॉट्सॲप करा.
+    </p>
 
-    <div class="contact-grid">
-
-      <!-- PHONE -->
-      <div class="contact-card">
-        <h2 data-mr="📱 फोन" data-en="📱 Phone">📱 फोन</h2>
-        <p>+91 9664016039</p>
-      </div>
-
-      <!-- EMAIL -->
-      <div class="contact-card">
-        <h2 data-mr="📧 ईमेल" data-en="📧 Email">📧 ईमेल</h2>
-        <p>contact@konkansanjeevan.com</p>
-      </div>
-
-      <!-- WHATSAPP -->
-      <div class="contact-card">
-        <h2 data-mr="💬 व्हॉट्सॲप" data-en="💬 WhatsApp">💬 व्हॉट्सॲप</h2>
-        <a class="btn"
-           href="https://wa.me/919664016039?text=I want to know more about Konkan Sanjeevan"
-           data-mr="व्हॉट्सॲपवर संदेश पाठवा"
-           data-en="Message on WhatsApp">
-           व्हॉट्सॲपवर संदेश पाठवा
-        </a>
-      </div>
-
-    </div>
-
+    <a class="btn"
+       href="https://wa.me/919664016039?text=नमस्कार,%20मला%20माहिती%20हवी.%20Hello,%20I%20need%20information">
+       WhatsApp Now
+    </a>
   </div>
 </section>
 
@@ -81,28 +56,15 @@
 </footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("show");
-}
-
-/* LANGUAGE SYSTEM */
-let lang = localStorage.getItem("lang") || "mr";
-
-function applyLanguage(){
-  document.querySelectorAll("[data-mr]").forEach(el=>{
-    el.innerHTML = (lang==="mr") ? el.dataset.mr : el.dataset.en;
-  });
-  document.getElementById("langBtn").innerText =
-    (lang==="mr") ? "English" : "मराठी";
-}
-
+function toggleMenu(){navMenu.classList.toggle("show")}
+let lang=localStorage.getItem("lang")||"mr";
 function toggleLanguage(){
-  lang = (lang==="mr") ? "en" : "mr";
-  localStorage.setItem("lang", lang);
-  applyLanguage();
+  document.querySelectorAll("[data-mr]").forEach(el=>{
+    el.innerText=(lang==="mr")?el.dataset.en:el.dataset.mr;
+  });
+  lang=(lang==="mr")?"en":"mr";
+  localStorage.setItem("lang",lang);
 }
-
-applyLanguage();
 </script>
 
 </body>
