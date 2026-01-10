@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-<link rel="stylesheet" href="css/style.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title data-mr="पर्यटन - कोंकण संजीवन" data-en="Tourism - Konkan Sanjeevan">
-पर्यटन - कोंकण संजीवन
-</title>
+  <!-- TITLE MUST BE STATIC -->
+  <title>Tourism - Konkan Sanjeevan</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -72,20 +72,34 @@
 
 </section>
 
+<footer>
+  © 2026 कोंकण संजीवन
+</footer>
+
 <script>
+/* MOBILE MENU */
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
 
-let lang = "mr";
-function toggleLanguage(){
+/* LANGUAGE SYSTEM (CONSISTENT & PERSISTENT) */
+let lang = localStorage.getItem("lang") || "mr";
+
+function applyLanguage(){
   document.querySelectorAll("[data-mr]").forEach(el=>{
-    el.innerText = (lang==="mr") ? el.dataset.en : el.dataset.mr;
+    el.innerHTML = (lang === "mr") ? el.dataset.mr : el.dataset.en;
   });
   document.getElementById("langBtn").innerText =
-    (lang==="mr") ? "मराठी" : "English";
-  lang = (lang==="mr") ? "en" : "mr";
+    (lang === "mr") ? "English" : "मराठी";
 }
+
+function toggleLanguage(){
+  lang = (lang === "mr") ? "en" : "mr";
+  localStorage.setItem("lang", lang);
+  applyLanguage();
+}
+
+applyLanguage();
 </script>
 
 </body>
