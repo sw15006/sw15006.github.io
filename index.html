@@ -3,79 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>कोंकण संजीवन | Konkan Sanjeevan</title>
-<meta name="description" content="Direct farm products and Konkan tourism platform">
+
+<meta name="description"
+content="Direct farm products and authentic Konkan tourism platform">
+
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="site-header" data-slide="1">
+<!-- ================= HEADER ================= -->
+<header class="site-header home-header">
   <div class="nav-container">
+
     <div class="logo">
-      <img src="images/konkansanjeevan_logo.png">
-      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
+      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan">
+      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">
+        कोंकण संजीवन
+      </span>
     </div>
 
-    <button class="lang-btn" onclick="toggleLanguage()">English</button>
+    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">
+      English
+    </button>
+
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
-      <a class="active" href="index.html" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a>
-      <a href="products.html" data-mr="उत्पादने" data-en="Products">उत्पादने</a>
-      <a href="tourism.html" data-mr="पर्यटन" data-en="Tourism">पर्यटन</a>
-      <a href="about.html" data-mr="आमच्याबद्दल" data-en="About">आमच्याबद्दल</a>
-      <a href="contact.html" data-mr="संपर्क" data-en="Contact">संपर्क</a>
+      <a class="active" href="index.html"
+         data-mr="मुख्यपृष्ठ" data-en="Home">
+         मुख्यपृष्ठ
+      </a>
+      <a href="products.html"
+         data-mr="उत्पादने" data-en="Products">
+         उत्पादने
+      </a>
+      <a href="tourism.html"
+         data-mr="पर्यटन" data-en="Tourism">
+         पर्यटन
+      </a>
+      <a href="about.html"
+         data-mr="आमच्याबद्दल" data-en="About">
+         आमच्याबद्दल
+      </a>
+      <a href="contact.html"
+         data-mr="संपर्क" data-en="Contact">
+         संपर्क
+      </a>
     </nav>
   </div>
 
-  <h1 class="page-title"
+  <h1 class="page-title header-fade show"
       data-mr="कोंकणाशी नाळ जोडणारे व्यासपीठ"
       data-en="Connecting Konkan">
       कोंकणाशी नाळ जोडणारे व्यासपीठ
   </h1>
 </header>
 
+<!-- ================= CONTENT ================= -->
 <section class="section cards">
+
   <div class="card">
-    <h2 data-mr="🌾 शेतमाल" data-en="🌾 Farm Products">🌾 शेतमाल</h2>
-    <p data-mr="थेट शेतकऱ्यांकडून" data-en="Direct from farmers">थेट शेतकऱ्यांकडून</p>
-    <a class="btn" href="products.html">View</a>
+    <h2 data-mr="🌾 शेतमाल" data-en="🌾 Farm Products">
+      🌾 शेतमाल
+    </h2>
+    <p data-mr="थेट शेतकऱ्यांकडून"
+       data-en="Direct from farmers">
+       थेट शेतकऱ्यांकडून
+    </p>
+    <a class="btn" href="products.html"
+       data-mr="पहा" data-en="View">
+       पहा
+    </a>
   </div>
 
   <div class="card">
-    <h2 data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</h2>
-    <p data-mr="अस्सल कोंकण अनुभव" data-en="Authentic Konkan experience">अस्सल कोंकण अनुभव</p>
-    <a class="btn" href="tourism.html">Explore</a>
+    <h2 data-mr="🏖 पर्यटन" data-en="🏖 Tourism">
+      🏖 पर्यटन
+    </h2>
+    <p data-mr="अस्सल कोंकण अनुभव"
+       data-en="Authentic Konkan experience">
+       अस्सल कोंकण अनुभव
+    </p>
+    <a class="btn" href="tourism.html"
+       data-mr="अन्वेषण करा" data-en="Explore">
+       अन्वेषण करा
+    </a>
   </div>
+
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
 © 2026 कोंकण संजीवन | Rooted in Konkan 🌿
 </footer>
 
-<script src="js/main.js">
-/* MENU */
-function toggleMenu(){navMenu.classList.toggle("show")}
-
-/* LANGUAGE */
-let lang=localStorage.getItem("lang")||"mr";
-function toggleLanguage(){
-  document.querySelectorAll("[data-mr]").forEach(el=>{
-    el.innerText=(lang==="mr")?el.dataset.en:el.dataset.mr;
-  });
-  lang=(lang==="mr")?"en":"mr";
-  localStorage.setItem("lang",lang);
-}
-
-/* SLIDESHOW */
-let slide=1;
-setInterval(()=>{
-  slide=slide===3?1:slide+1;
-  document.querySelector(".site-header").setAttribute("data-slide",slide);
-},4000);
-</script>
+<!-- ================= JS ================= -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
