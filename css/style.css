@@ -1,66 +1,42 @@
-/* ========== GLOBAL RESET ========== */
-* { box-sizing: border-box; }
-
+/* ===== RESET ===== */
+*{box-sizing:border-box;margin:0;padding:0}
 body{
-  margin:0;
-  font-family:Poppins, Arial, sans-serif;
+  font-family:Poppins,Arial,sans-serif;
   background:#f4f6f4;
   color:#333;
 }
 
-/* ========== HEADER ========== */
+/* ===== HEADER ===== */
 .site-header{
-  position: relative;
+  position:relative;
+  min-height:300px;
   color:#fff;
-  padding:20px;
-  min-height:260px;
-  overflow:hidden;
-
   background-size:cover;
   background-position:center;
-  background-repeat:no-repeat;
+  overflow:hidden;
 }
 
-/* Soft dark overlay (natural look) */
 .site-header::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.35);
-  z-index:0;
+  background:rgba(0,0,0,.45);
 }
 
-/* Keep content above overlay */
-.site-header *{
-  position: relative;
-  z-index:1;
-}
-
-/* Header images per page */
-.home-header{background-image:url("../images/header1.jpg");}
-.products-header{background-image:url("../images/header2.jpg");}
-.tourism-header{background-image:url("../images/header3.jpg");}
-.about-header{background-image:url("../images/header1.jpg");}
-.contact-header{background-image:url("../images/header3.jpg");}
-
-/* Clean readable text */
-.site-header h1,
-.site-header h2,
-.site-header p,
-.site-header span,
-.site-header a{
-  text-shadow:0 2px 4px rgba(0,0,0,0.45);
-}
-
-/* ========== NAVBAR ========== */
-.nav-container{
+.header-content{
+  position:relative;
+  z-index:2;
   max-width:1100px;
   margin:auto;
+  padding:20px;
+}
+
+/* ===== NAV ===== */
+.nav-container{
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
-
 .logo{
   display:flex;
   align-items:center;
@@ -68,9 +44,8 @@ body{
   font-size:1.3rem;
   font-weight:600;
 }
-
 .logo img{
-  height:60px;
+  height:50px;
   background:#fff;
   padding:6px;
   border-radius:8px;
@@ -78,34 +53,21 @@ body{
 
 nav{
   display:flex;
-  gap:18px;
+  gap:16px;
 }
-
 nav a{
   color:#fff;
   text-decoration:none;
   padding:6px 10px;
   border-radius:6px;
-  font-weight:500;
 }
+nav a.active,
+nav a:hover{background:#1b5e20}
 
-nav a:hover{
-  background:rgba(255,255,255,0.2);
-}
-
-nav a.active{
-  background:#1b5e20;
-}
-
-.menu-toggle{
-  display:none;
-  font-size:1.8rem;
-  cursor:pointer;
-}
+.menu-toggle{display:none;font-size:1.8rem;cursor:pointer}
 
 .lang-btn{
   background:#fff;
-  color:#2f7d32;
   border:none;
   padding:6px 10px;
   border-radius:6px;
@@ -113,19 +75,29 @@ nav a.active{
   cursor:pointer;
 }
 
-/* ========== CONTENT HELPERS ========== */
+/* ===== HEADER TEXT ===== */
+.header-title{
+  margin-top:40px;
+  font-size:2rem;
+  text-shadow:0 3px 8px rgba(0,0,0,.7);
+  opacity:0;
+  transform:translateY(15px);
+  transition:1s;
+}
+.header-title.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ===== SECTIONS ===== */
 .section{
   max-width:1100px;
   margin:auto;
   padding:40px 20px;
 }
 
-.page-title{
-  text-align:center;
-  margin-top:15px;
-}
-
-.cards{
+/* ===== PRODUCT GRID ===== */
+.grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:25px;
@@ -133,22 +105,47 @@ nav a.active{
 
 .card{
   background:#fff;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+/* PRICE BADGE */
+.price-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#2f7d32;
+  color:#fff;
+  padding:6px 12px;
+  border-radius:20px;
+  font-weight:600;
+  font-size:.9rem;
+}
+
+.card-body{
+  padding:20px;
 }
 
 .btn{
   display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
+  margin-top:12px;
   background:#2f7d32;
   color:#fff;
-  text-decoration:none;
+  padding:10px 16px;
   border-radius:6px;
+  text-decoration:none;
 }
 
-/* ========== FOOTER ========== */
+/* ===== FOOTER ===== */
 footer{
   background:#1b5e20;
   color:#fff;
@@ -156,28 +153,18 @@ footer{
   padding:15px;
 }
 
-/* ========== MOBILE ========== */
+/* ===== MOBILE ===== */
 @media(max-width:768px){
-  .menu-toggle{
-    display:block;
-  }
-
+  .menu-toggle{display:block}
   nav{
     display:none;
     flex-direction:column;
-    background:rgba(0,0,0,0.8);
+    background:rgba(0,0,0,.8);
     position:absolute;
     right:20px;
     top:70px;
     padding:15px;
     border-radius:10px;
   }
-
-  nav.show{
-    display:flex;
-  }
-
-  .logo img{
-    height:48px;
-  }
+  nav.show{display:flex}
 }
