@@ -2,77 +2,101 @@
 <html lang="mr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>उत्पादने | Konkan Sanjeevan</title>
+<title>शेतमाल | Konkan Sanjeevan</title>
+
+<meta name="description"
+content="Buy authentic Konkan rice, Alphonso mango, and cashew directly from farmers. Supporting Konkan farmers and rural economy.">
+
+<meta name="keywords"
+content="Konkan rice, Alphonso mango, cashew, organic konkan products">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header class="site-header" data-slide="2">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="images/konkansanjeevan_logo.png">
-      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
+<header class="site-header" style="background-image:url('images/header2.jpg')">
+  <div class="header-content">
+
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/konkansanjeevan_logo.png">
+        <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
+      </div>
+
+      <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">English</button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <nav id="navMenu">
+        <a href="index.html">🏠 Home</a>
+        <a href="products.html" class="active">🌾 Products</a>
+        <a href="tourism.html">🏖 Tourism</a>
+        <a href="about.html">ℹ️ About</a>
+        <a href="contact.html">📞 Contact</a>
+      </nav>
     </div>
 
-    <button class="lang-btn" onclick="toggleLanguage()">English</button>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <h1 class="header-title"
+      data-mr="🌾 शेतमाल"
+      data-en="🌾 Farm Products">🌾 शेतमाल</h1>
 
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <a class="active" href="products.html">Products</a>
-      <a href="tourism.html">Tourism</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </div>
-
-  <h1 class="page-title">🌾 शेतमाल</h1>
 </header>
 
 <section class="section grid">
 
+<!-- RICE -->
 <div class="card">
-<img src="images/Konkani_rice.jpg">
-<h3>कोंकण भात</h3>
-<span class="price">₹80 / किलो</span>
-<a class="btn"
-href="https://wa.me/919664016039?text=नमस्कार,%20मला%20कोंकण%20भात%20हवा.%20Hello,%20I%20want%20Konkan%20Rice">
-WhatsApp Order
-</a>
+  <div style="position:relative">
+    <img src="images/Konkani_rice.jpg">
+    <span class="price-badge">₹80 / kg</span>
+  </div>
+  <div class="card-body">
+    <h3 data-mr="कोंकण भात" data-en="Konkan Rice">कोंकण भात</h3>
+    <a class="btn"
+    href="https://wa.me/919664016039?text=नमस्कार%20मला%20कोंकण%20भात%20घ्यायचा%20आहे%20|%20I%20want%20Konkan%20Rice">
+    WhatsApp Order
+    </a>
+  </div>
 </div>
 
+<!-- MANGO -->
 <div class="card">
-<img src="images/hapus_amba.jpg">
-<h3>आल्फन्सो आंबा</h3>
-<span class="price">हंगामी</span>
-<a class="btn"
-href="https://wa.me/919664016039?text=नमस्कार,%20मला%20आल्फन्सो%20आंबा%20हवा.%20Hello,%20I%20want%20Alphonso%20Mango">
-WhatsApp Order
-</a>
+  <div style="position:relative">
+    <img src="images/hapus_amba.jpg">
+    <span class="price-badge">Seasonal</span>
+  </div>
+  <div class="card-body">
+    <h3 data-mr="आल्फन्सो आंबा" data-en="Alphonso Mango">आल्फन्सो आंबा</h3>
+    <a class="btn"
+    href="https://wa.me/919664016039?text=नमस्कार%20मला%20आल्फन्सो%20आंबा%20घ्यायचा%20आहे%20|%20I%20want%20Alphonso%20Mango">
+    WhatsApp Order
+    </a>
+  </div>
 </div>
 
+<!-- CASHEW -->
 <div class="card">
-<img src="images/kaju.jpg">
-<h3>काजू</h3>
-<span class="price">₹900 / किलो</span>
-<a class="btn"
-href="https://wa.me/919664016039?text=नमस्कार,%20मला%20काजू%20हवे.%20Hello,%20I%20want%20Cashew">
-WhatsApp Order
-</a>
+  <div style="position:relative">
+    <img src="images/kaju.jpg">
+    <span class="price-badge">₹900 / kg</span>
+  </div>
+  <div class="card-body">
+    <h3 data-mr="काजू" data-en="Cashew">काजू</h3>
+    <a class="btn"
+    href="https://wa.me/919664016039?text=नमस्कार%20मला%20काजू%20घ्यायचा%20आहे%20|%20I%20want%20Cashew">
+    WhatsApp Order
+    </a>
+  </div>
 </div>
 
 </section>
 
 <footer>© 2026 कोंकण संजीवन</footer>
 
-<script src="js/main.js">
-function toggleMenu(){navMenu.classList.toggle("show")}
-let lang=localStorage.getItem("lang")||"mr";
-function toggleLanguage(){location.reload()}
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
