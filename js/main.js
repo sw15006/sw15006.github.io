@@ -1,34 +1,32 @@
-/* ===== MOBILE MENU ===== */
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("show");
+/* ===============================
+   MOBILE MENU
+================================ */
+function toggleMenu() {
+  const nav = document.getElementById("navMenu");
+  if (nav) nav.classList.toggle("show");
 }
 
-/* ===== LANGUAGE TOGGLE ===== */
-let lang="mr";
-function toggleLanguage(){
-  document.querySelectorAll("[data-mr]").forEach(el=>{
-    el.innerText = (lang==="mr") ? el.dataset.en : el.dataset.mr;
+/* ===============================
+   LANGUAGE TOGGLE (GLOBAL)
+================================ */
+let lang = localStorage.getItem("lang") || "mr";
+
+function applyLanguage() {
+  document.querySelectorAll("[data-mr]").forEach(el => {
+    el.innerText = (lang === "mr") ? el.dataset.mr : el.dataset.en;
   });
-  document.getElementById("langBtn").innerText =
-    (lang==="mr") ? "मराठी" : "English";
-  lang = (lang==="mr") ? "en" : "mr";
+
+  const btn = document.getElementById("langBtn");
+  if (btn) btn.innerText = (lang === "mr") ? "English" : "मराठी";
 }
 
-/* ===== HEADER SLIDESHOW ===== */
-const headers=[
-  "images/header1.jpg",
-  "images/header2.jpg",
-  "images/header3.jpg"
-];
-let index=0;
-const header=document.querySelector(".site-header");
-const title=document.querySelector(".header-title");
+function toggleLanguage() {
+  lang = (lang === "mr") ? "en" : "mr";
+  localStorage.setItem("lang", lang);
+  applyLanguage();
+}
 
-setInterval(()=>{
-  index=(index+1)%headers.length;
-  header.style.backgroundImage=`url(${headers[index]})`;
-  title.classList.remove("show");
-  setTimeout(()=>title.classList.add("show"),300);
-},5000);
-
-window.onload=()=>title.classList.add("show");
+/* ===============================
+   ON LOAD
+================================ */
+document.addEventListener("DOMContentLoaded", applyLanguage);
