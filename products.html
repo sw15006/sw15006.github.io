@@ -1,144 +1,118 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-<meta charset="UTF-8">
-<title>शेतमाल | Konkan Sanjeevan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Konkan Sanjeevan</title>
 
-<meta name="description"
-content="Buy authentic Konkan rice, Alphonso mango, and cashew directly from farmers. Supporting Konkan farmers and rural economy.">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-<meta name="keywords"
-content="Konkan rice, Alphonso mango, cashew, organic konkan products">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header class="site-header products-header">
   <div class="nav-container">
 
     <div class="logo">
-      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan">
-      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">
-        कोंकण संजीवन
-      </span>
+      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan Logo">
+      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
     </div>
 
-    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">
-      English
-    </button>
+    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">English</button>
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
     <nav id="navMenu">
-      <a href="index.html"
-         data-mr="मुख्यपृष्ठ" data-en="Home">
-         मुख्यपृष्ठ
-      </a>
-      <a href="products.html" class="active"
-         data-mr="🌾 शेतमाल" data-en="🌾 Products">
-         🌾 शेतमाल
-      </a>
-      <a href="tourism.html"
-         data-mr="🏖 पर्यटन" data-en="🏖 Tourism">
-         🏖 पर्यटन
-      </a>
-      <a href="about.html"
-         data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">
-         ℹ️ आमच्याबद्दल
-      </a>
-      <a href="contact.html"
-         data-mr="📞 संपर्क" data-en="📞 Contact">
-         📞 संपर्क
-      </a>
+      <a href="index.html" data-mr="🏠 मुख्यपृष्ठ" data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
+      <a href="products.html" class="active" data-mr="🌾 उत्पादने" data-en="🌾 Products">🌾 उत्पादने</a>
+      <a href="tourism.html" data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</a>
+      <a href="about.html" data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
+      <a href="contact.html" data-mr="📞 संपर्क" data-en="📞 Contact">📞 संपर्क</a>
     </nav>
+
   </div>
 
-  <h1 class="page-title header-fade show"
+  <h1 class="page-title"
       data-mr="🌾 शेतमाल"
       data-en="🌾 Farm Products">
       🌾 शेतमाल
   </h1>
 </header>
 
-<!-- ================= PRODUCTS ================= -->
-<section class="section grid">
+<!-- ✅ USE .cards (matches style.css) -->
+<section class="section cards">
 
-  <!-- RICE -->
   <div class="card">
-    <div style="position:relative">
-      <img src="images/Konkani_rice.jpg" alt="Konkan Rice">
-      <span class="price-badge">₹80 / kg</span>
-    </div>
-    <div class="card-body">
-      <h3 data-mr="कोंकण भात" data-en="Konkan Rice">
-        कोंकण भात
-      </h3>
-      <a class="btn"
-         href="https://wa.me/919664016039?text=नमस्कार,%20मला%20कोंकण%20भात%20घ्यायचा%20आहे.%20Hello,%20I%20want%20Konkan%20Rice."
-         data-mr="व्हॉट्सॲपवर ऑर्डर करा"
-         data-en="Order on WhatsApp">
-         व्हॉट्सॲपवर ऑर्डर करा
-      </a>
-    </div>
+    <img src="images/rice.jpg" alt="Konkan Rice">
+    <h3 data-mr="कोंकण भात" data-en="Konkan Rice">कोंकण भात</h3>
+    <p data-mr="₹80/किलो" data-en="₹80/kg">₹80/किलो</p>
+    <a class="btn"
+       href="https://wa.me/919664016039?text=I want Konkan Rice"
+       data-mr="व्हॉट्सॲपवर ऑर्डर करा"
+       data-en="Order on WhatsApp">
+       व्हॉट्सॲपवर ऑर्डर करा
+    </a>
   </div>
 
-  <!-- MANGO -->
   <div class="card">
-    <div style="position:relative">
-      <img src="images/hapus_amba.jpg" alt="Alphonso Mango">
-      <span class="price-badge"
-            data-mr="हंगामी"
-            data-en="Seasonal">
-            हंगामी
-      </span>
-    </div>
-    <div class="card-body">
-      <h3 data-mr="आल्फन्सो आंबा" data-en="Alphonso Mango">
-        आल्फन्सो आंबा
-      </h3>
-      <a class="btn"
-         href="https://wa.me/919664016039?text=नमस्कार,%20मला%20आल्फन्सो%20आंबा%20घ्यायचा%20आहे.%20Hello,%20I%20want%20Alphonso%20Mango."
-         data-mr="व्हॉट्सॲपवर ऑर्डर करा"
-         data-en="Order on WhatsApp">
-         व्हॉट्सॲपवर ऑर्डर करा
-      </a>
-    </div>
+    <img src="images/mango.jpg" alt="Alphonso Mango">
+    <h3 data-mr="आल्फन्सो आंबा" data-en="Alphonso Mango">आल्फन्सो आंबा</h3>
+    <p data-mr="हंगामी" data-en="Seasonal">हंगामी</p>
+    <a class="btn"
+       href="https://wa.me/919664016039?text=I want Alphonso Mango"
+       data-mr="ऑर्डर करा"
+       data-en="Order">
+       ऑर्डर करा
+    </a>
   </div>
 
-  <!-- CASHEW -->
   <div class="card">
-    <div style="position:relative">
-      <img src="images/kaju.jpg" alt="Cashew">
-      <span class="price-badge">₹900 / kg</span>
-    </div>
-    <div class="card-body">
-      <h3 data-mr="काजू" data-en="Cashew">
-        काजू
-      </h3>
-      <a class="btn"
-         href="https://wa.me/919664016039?text=नमस्कार,%20मला%20काजू%20घ्यायचा%20आहे.%20Hello,%20I%20want%20Cashew."
-         data-mr="व्हॉट्सॲपवर ऑर्डर करा"
-         data-en="Order on WhatsApp">
-         व्हॉट्सॲपवर ऑर्डर करा
-      </a>
-    </div>
+    <img src="images/cashew.jpg" alt="Cashew">
+    <h3 data-mr="काजू" data-en="Cashew">काजू</h3>
+    <p data-mr="₹900/किलो" data-en="₹900/kg">₹900/किलो</p>
+    <a class="btn"
+       href="https://wa.me/919664016039?text=I want Cashew"
+       data-mr="ऑर्डर करा"
+       data-en="Order">
+       ऑर्डर करा
+    </a>
   </div>
 
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
-© 2026 कोंकण संजीवन
+  © 2026 कोंकण संजीवन
 </footer>
 
-<!-- ================= JS ================= -->
-<script src="js/main.js"></script>
+<script>
+/* MOBILE MENU */
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("show");
+}
+
+/* LANGUAGE SYSTEM (SAME AS INDEX) */
+let lang = localStorage.getItem("lang") || "mr";
+
+function applyLanguage(){
+  document.querySelectorAll("[data-mr]").forEach(el=>{
+    el.innerHTML = (lang === "mr") ? el.dataset.mr : el.dataset.en;
+  });
+  document.getElementById("langBtn").innerText =
+    (lang === "mr") ? "English" : "मराठी";
+}
+
+function toggleLanguage(){
+  lang = (lang === "mr") ? "en" : "mr";
+  localStorage.setItem("lang", lang);
+  applyLanguage();
+}
+
+applyLanguage();
+</script>
 
 </body>
 </html>
