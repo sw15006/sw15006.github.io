@@ -1,116 +1,107 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konkan Sanjeevan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<title>कोंकण संजीवन | Konkan Sanjeevan</title>
 
-  <!-- Global CSS -->
-  <link rel="stylesheet" href="css/style.css">
+<meta name="description"
+content="कोंकण संजीवन – शेतकरी, अस्सल कोंकणी उत्पादने आणि पर्यटन यांना जोडणारे व्यासपीठ.">
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- ✅ CORRECT HEADER -->
+<!-- ================= HEADER ================= -->
 <header class="site-header home-header">
+  <div class="header-content">
 
-  <div class="nav-container">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan">
+        <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">
+          कोंकण संजीवन
+        </span>
+      </div>
 
-    <div class="logo">
-      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan Logo">
-      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">कोंकण संजीवन</span>
+      <button class="lang-btn" onclick="toggleLanguage()">English</button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <nav id="navMenu">
+        <a class="active" href="index.html"
+           data-mr="🏠 मुख्यपृष्ठ"
+           data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
+
+        <a href="products.html"
+           data-mr="🌾 उत्पादने"
+           data-en="🌾 Products">🌾 उत्पादने</a>
+
+        <a href="tourism.html"
+           data-mr="🏖 पर्यटन"
+           data-en="🏖 Tourism">🏖 पर्यटन</a>
+
+        <a href="about.html"
+           data-mr="ℹ️ आमच्याबद्दल"
+           data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
+
+        <a href="contact.html"
+           data-mr="📞 संपर्क"
+           data-en="📞 Contact">📞 संपर्क</a>
+      </nav>
     </div>
 
-    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">English</button>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav id="navMenu">
-      <a href="index.html" class="active" data-mr="🏠 मुख्यपृष्ठ" data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
-      <a href="products.html" data-mr="🌾 उत्पादने" data-en="🌾 Products">🌾 उत्पादने</a>
-      <a href="tourism.html" data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</a>
-      <a href="about.html" data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
-      <a href="contact.html" data-mr="📞 संपर्क" data-en="📞 Contact">📞 संपर्क</a>
-    </nav>
+    <h1 class="header-title"
+        data-mr="कोंकणाशी नाळ जोडणारे व्यासपीठ"
+        data-en="Connecting Konkan">
+        कोंकणाशी नाळ जोडणारे व्यासपीठ
+    </h1>
 
   </div>
-
-  <p class="tagline"
-     data-mr="कोंकणाशी नाळ जोडणारे व्यासपीठ"
-     data-en="Connecting Konkan">
-     कोंकणाशी नाळ जोडणारे व्यासपीठ
-  </p>
-
 </header>
 
-<section class="section cards">
+<!-- ================= CONTENT ================= -->
+<section class="section grid">
+
   <div class="card">
-    <h2 data-mr="🌾 शेतमाल" data-en="🌾 Farm Products">🌾 शेतमाल</h2>
-    <p data-mr="थेट शेतकऱ्यांकडून." data-en="Direct from farmers.">
-      थेट शेतकऱ्यांकडून.
-    </p>
-    <a class="btn" href="products.html"
-       data-mr="उत्पादने पाहा"
-       data-en="View Products">
-       उत्पादने पाहा
-    </a>
+    <div class="card-body">
+      <h2 data-mr="🌾 शेतमाल" data-en="🌾 Farm Products">🌾 शेतमाल</h2>
+      <p data-mr="थेट शेतकऱ्यांकडून"
+         data-en="Direct from farmers">
+         थेट शेतकऱ्यांकडून
+      </p>
+      <a class="btn" href="products.html"
+         data-mr="पहा"
+         data-en="View">
+         पहा
+      </a>
+    </div>
   </div>
 
   <div class="card">
-    <h2 data-mr="🏖 कोंकण पर्यटन" data-en="🏖 Konkan Tourism">🏖 कोंकण पर्यटन</h2>
-    <p data-mr="पर्यटन आणि होमस्टे." data-en="Homestays & tours.">
-      पर्यटन आणि होमस्टे.
-    </p>
-    <a class="btn" href="tourism.html"
-       data-mr="पर्यटन पाहा"
-       data-en="Explore Tourism">
-       पर्यटन पाहा
-    </a>
+    <div class="card-body">
+      <h2 data-mr="🏖 पर्यटन" data-en="🏖 Tourism">🏖 पर्यटन</h2>
+      <p data-mr="अस्सल कोंकण अनुभव"
+         data-en="Authentic Konkan experiences">
+         अस्सल कोंकण अनुभव
+      </p>
+      <a class="btn" href="tourism.html"
+         data-mr="पहा"
+         data-en="Explore">
+         पहा
+      </a>
+    </div>
   </div>
+
 </section>
 
-<section class="section">
-  <h2 data-mr="कोंकण संजीवन का?" data-en="Why Konkan Sanjeevan?">
-    कोंकण संजीवन का?
-  </h2>
-  <p data-mr="शेतकरी आणि पर्यटनाला एकत्र पाठिंबा."
-     data-en="We support local farmers and tourism together.">
-     शेतकरी आणि पर्यटनाला एकत्र पाठिंबा.
-  </p>
-</section>
-
+<!-- ================= FOOTER ================= -->
 <footer>
-  © 2026 कोंकण संजीवन
+© 2026 कोंकण संजीवन | Rooted in Konkan 🌿
 </footer>
 
-<script>
-/* MOBILE MENU */
-function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("show");
-}
-
-/* LANGUAGE SYSTEM (PERSISTENT) */
-let lang = localStorage.getItem("lang") || "mr";
-
-function applyLanguage(){
-  document.querySelectorAll("[data-mr]").forEach(el=>{
-    el.innerHTML = (lang === "mr") ? el.dataset.mr : el.dataset.en;
-  });
-  document.getElementById("langBtn").innerText =
-    (lang === "mr") ? "English" : "मराठी";
-}
-
-function toggleLanguage(){
-  lang = (lang === "mr") ? "en" : "mr";
-  localStorage.setItem("lang", lang);
-  applyLanguage();
-}
-
-applyLanguage();
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
