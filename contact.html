@@ -2,12 +2,15 @@
 <html lang="mr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>संपर्क | Konkan Sanjeevan</title>
 
 <meta name="description"
-content="Contact Konkan Sanjeevan via WhatsApp for farm products and Konkan tourism enquiries">
+content="कोंकण संजीवनशी संपर्क साधा – शेतमाल आणि कोंकण पर्यटनासाठी व्हॉट्सॲपद्वारे चौकशी करा.">
+
+<meta name="keywords"
+content="contact konkan sanjeevan, konkan products contact, konkan tourism enquiry">
 
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -17,67 +20,70 @@ content="Contact Konkan Sanjeevan via WhatsApp for farm products and Konkan tour
 
 <!-- ================= HEADER ================= -->
 <header class="site-header contact-header">
-  <div class="nav-container">
+  <div class="header-content">
 
-    <div class="logo">
-      <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan">
-      <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">
-        कोंकण संजीवन
-      </span>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/konkansanjeevan_logo.png" alt="Konkan Sanjeevan">
+        <span data-mr="कोंकण संजीवन" data-en="Konkan Sanjeevan">
+          कोंकण संजीवन
+        </span>
+      </div>
+
+      <button class="lang-btn" onclick="toggleLanguage()">English</button>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+      <nav id="navMenu">
+        <a href="index.html"
+           data-mr="🏠 मुख्यपृष्ठ"
+           data-en="🏠 Home">🏠 मुख्यपृष्ठ</a>
+
+        <a href="products.html"
+           data-mr="🌾 उत्पादने"
+           data-en="🌾 Products">🌾 उत्पादने</a>
+
+        <a href="tourism.html"
+           data-mr="🏖 पर्यटन"
+           data-en="🏖 Tourism">🏖 पर्यटन</a>
+
+        <a href="about.html"
+           data-mr="ℹ️ आमच्याबद्दल"
+           data-en="ℹ️ About">ℹ️ आमच्याबद्दल</a>
+
+        <a href="contact.html" class="active"
+           data-mr="📞 संपर्क"
+           data-en="📞 Contact">📞 संपर्क</a>
+      </nav>
     </div>
 
-    <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">
-      English
-    </button>
+    <h1 class="header-title"
+        data-mr="📞 संपर्क"
+        data-en="📞 Contact">
+        📞 संपर्क
+    </h1>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav id="navMenu">
-      <a href="index.html"
-         data-mr="मुख्यपृष्ठ" data-en="Home">
-         मुख्यपृष्ठ
-      </a>
-      <a href="products.html"
-         data-mr="उत्पादने" data-en="Products">
-         उत्पादने
-      </a>
-      <a href="tourism.html"
-         data-mr="पर्यटन" data-en="Tourism">
-         पर्यटन
-      </a>
-      <a href="about.html"
-         data-mr="ℹ️ आमच्याबद्दल" data-en="ℹ️ About">
-         ℹ️ आमच्याबद्दल
-      </a>
-      <a href="contact.html" class="active"
-         data-mr="📞 संपर्क" data-en="📞 Contact">
-         📞 संपर्क
-      </a>
-    </nav>
   </div>
-
-  <h1 class="page-title header-fade show"
-      data-mr="📞 संपर्क"
-      data-en="📞 Contact">
-      📞 संपर्क
-  </h1>
 </header>
 
 <!-- ================= CONTENT ================= -->
 <section class="section">
+
   <div class="card">
+    <div class="card-body">
 
-    <p data-mr="ऑर्डर किंवा माहिती साठी व्हॉट्सॲपवर संपर्क करा."
-       data-en="Contact us on WhatsApp for orders or enquiries.">
-       ऑर्डर किंवा माहिती साठी व्हॉट्सॲपवर संपर्क करा.
-    </p>
+      <p data-mr="शेतमाल ऑर्डर किंवा कोंकण पर्यटनाबाबत माहिती साठी व्हॉट्सॲपवर संपर्क करा."
+         data-en="Contact us on WhatsApp for farm product orders or Konkan tourism enquiries.">
+         शेतमाल ऑर्डर किंवा कोंकण पर्यटनाबाबत माहिती साठी व्हॉट्सॲपवर संपर्क करा.
+      </p>
 
-    <a class="btn"
-       href="https://wa.me/919664016039?text=नमस्कार,%20मला%20कोंकण%20संजीवन%20बद्दल%20माहिती%20हवी.%20Hello,%20I%20need%20information%20about%20Konkan%20Sanjeevan.">
-       WhatsApp Now
-    </a>
+      <a class="btn"
+         href="https://wa.me/919664016039?text=Namaskar%2C%20mala%20Konkan%20Sanjeevan%20babatchi%20mahiti%20havi.%20Hello%2C%20I%20need%20information%20about%20Konkan%20Sanjeevan">
+         WhatsApp Now
+      </a>
 
+    </div>
   </div>
+
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -85,8 +91,6 @@ content="Contact Konkan Sanjeevan via WhatsApp for farm products and Konkan tour
 © 2026 कोंकण संजीवन | Rooted in Konkan 🌿
 </footer>
 
-<!-- ================= JS ================= -->
 <script src="js/main.js"></script>
-
 </body>
 </html>
