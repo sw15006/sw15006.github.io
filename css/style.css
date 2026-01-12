@@ -1,36 +1,61 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ========== GLOBAL RESET ========== */
+* { box-sizing: border-box; }
 
 body{
-  font-family: Poppins, Arial, sans-serif;
+  margin:0;
+  font-family:Poppins, Arial, sans-serif;
   background:#f4f6f4;
   color:#333;
 }
 
-/* ===== HEADER ===== */
+/* ========== HEADER ========== */
 .site-header{
-  background-size: cover;
-  background-position: center;
-  color:#fff;
   position: relative;
+  color:#fff;
+  padding:20px;
+  min-height:260px;
+  overflow:hidden;
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
 }
 
+/* Soft dark overlay (natural look) */
 .site-header::before{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.35);
+  z-index:0;
 }
 
-.header-inner{
+/* Keep content above overlay */
+.site-header *{
   position: relative;
-  z-index:2;
+  z-index:1;
+}
+
+/* Header images per page */
+.home-header{background-image:url("../images/header1.jpg");}
+.products-header{background-image:url("../images/header2.jpg");}
+.tourism-header{background-image:url("../images/header3.jpg");}
+.about-header{background-image:url("../images/header1.jpg");}
+.contact-header{background-image:url("../images/header3.jpg");}
+
+/* Clean readable text */
+.site-header h1,
+.site-header h2,
+.site-header p,
+.site-header span,
+.site-header a{
+  text-shadow:0 2px 4px rgba(0,0,0,0.45);
+}
+
+/* ========== NAVBAR ========== */
+.nav-container{
   max-width:1100px;
   margin:auto;
-  padding:20px;
-}
-
-/* ===== NAV ===== */
-.nav-container{
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -45,7 +70,7 @@ body{
 }
 
 .logo img{
-  height:50px;
+  height:60px;
   background:#fff;
   padding:6px;
   border-radius:8px;
@@ -53,7 +78,7 @@ body{
 
 nav{
   display:flex;
-  gap:16px;
+  gap:18px;
 }
 
 nav a{
@@ -61,10 +86,14 @@ nav a{
   text-decoration:none;
   padding:6px 10px;
   border-radius:6px;
+  font-weight:500;
 }
 
-nav a.active,
 nav a:hover{
+  background:rgba(255,255,255,0.2);
+}
+
+nav a.active{
   background:#1b5e20;
 }
 
@@ -84,18 +113,16 @@ nav a:hover{
   cursor:pointer;
 }
 
-/* ===== HEADER TEXT ===== */
-.page-title{
-  margin-top:40px;
-  font-size:2rem;
-  text-shadow:0 3px 8px rgba(0,0,0,.7);
-}
-
-/* ===== SECTIONS ===== */
+/* ========== CONTENT HELPERS ========== */
 .section{
   max-width:1100px;
   margin:auto;
   padding:40px 20px;
+}
+
+.page-title{
+  text-align:center;
+  margin-top:15px;
 }
 
 .cards{
@@ -107,21 +134,21 @@ nav a:hover{
 .card{
   background:#fff;
   padding:25px;
-  border-radius:14px;
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
 .btn{
   display:inline-block;
-  margin-top:12px;
+  margin-top:15px;
+  padding:10px 18px;
   background:#2f7d32;
   color:#fff;
-  padding:10px 16px;
-  border-radius:6px;
   text-decoration:none;
+  border-radius:6px;
 }
 
-/* ===== FOOTER ===== */
+/* ========== FOOTER ========== */
 footer{
   background:#1b5e20;
   color:#fff;
@@ -129,18 +156,28 @@ footer{
   padding:15px;
 }
 
-/* ===== MOBILE ===== */
+/* ========== MOBILE ========== */
 @media(max-width:768px){
-  .menu-toggle{display:block}
+  .menu-toggle{
+    display:block;
+  }
+
   nav{
     display:none;
     flex-direction:column;
-    background:rgba(0,0,0,.8);
+    background:rgba(0,0,0,0.8);
     position:absolute;
     right:20px;
     top:70px;
     padding:15px;
     border-radius:10px;
   }
-  nav.show{display:flex}
+
+  nav.show{
+    display:flex;
+  }
+
+  .logo img{
+    height:48px;
+  }
 }
